@@ -12,7 +12,7 @@ import { CvComponent } from './cv/cv.component';
 import { CvDetailComponent } from './cv-detail/cv-detail.component';
 import { CvListComponent } from './cv-list/cv-list.component';
 import { ListItemComponent } from './list-item/list-item.component';
-import { DefaultImagePipe } from './default-image.pipe';
+import { DefaultImagePipe } from './pipes/default-image.pipe';
 
 @NgModule({
   declarations: [
