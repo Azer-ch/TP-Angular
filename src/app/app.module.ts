@@ -14,6 +14,9 @@ import { CvListComponent } from './cv-list/cv-list.component';
 import { ListItemComponent } from './list-item/list-item.component';
 import { DefaultImagePipe } from './pipes/default-image.pipe';
 import { EmbaucheComponentComponent } from './embauche-component/embauche-component.component';
+import {EmbaucheService} from "./services/embauche.service";
+import {ToastrModule} from "ngx-toastr";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -32,9 +35,11 @@ import { EmbaucheComponentComponent } from './embauche-component/embauche-compon
   ],
     imports: [
         BrowserModule,
-        FormsModule
+        FormsModule,
+        BrowserAnimationsModule,
+        ToastrModule.forRoot(),
     ],
-  providers: [],
+  providers:[EmbaucheService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

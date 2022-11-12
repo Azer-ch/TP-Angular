@@ -1,1 +1,8 @@
-<p>embauche-component works!</p>
+<div *ngIf="getEmbauchedService().length>0">
+  <p> Liste cvs Embauches :</p>
+  <div class="col-4">
+  <ul class="list-group" *ngFor="let cv of getEmbauchedService()">
+    <app-list-item [cv]="cv"></app-list-item>
+  </ul>
+  </div>
+</div>

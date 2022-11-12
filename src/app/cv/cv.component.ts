@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Cv} from "../Model/Cv";
 import {CvService} from "../services/cv.service";
+import {EmbaucheService} from "../services/embauche.service";
 
 @Component({
   selector: 'app-cv',
@@ -11,7 +12,6 @@ import {CvService} from "../services/cv.service";
 export class CvComponent implements OnInit {
   selectedCv : Cv | undefined;
   cvs : Cv []=[];
-  cvsEmbauche : Cv[] =[];
   constructor(private cvService : CvService) { }
 
   ngOnInit(): void {
