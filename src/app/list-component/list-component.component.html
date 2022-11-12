@@ -1,0 +1,4 @@
+<ul class="list-group">
+  <app-item-component *ngFor="let cv of cvs" (itemClick)="onItemSelect($event)" [isActive]="cv.id === selectedCvId" [cv]="cv">
+  </app-item-component>
+</ul>

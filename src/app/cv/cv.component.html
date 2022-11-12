@@ -1,0 +1,8 @@
+<div class="row container-fluid">
+  <div class="col-6 mt-5">
+    <app-cv-list [cvs]="cvs" (selectedCv)="selectCv($event)" [selectedId]="selectedCv?.id"></app-cv-list>
+  </div>
+  <div class="col-6 mt-5">
+    <app-cv-detail [cv]="selectedCv"></app-cv-detail>
+  </div>
+</div>

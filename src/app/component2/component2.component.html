@@ -1,0 +1,8 @@
+<div class="mt-2">
+  <p *ngIf="parentColor">My parent's color is <span
+    [style.color]="parentColor=='transparent'?'black':parentColor">{{parentColor}}</span></p>
+  <div>
+    <input type="text" placeholder="favourite color" [(ngModel)]="favouriteColor" >
+    <button class="m-lg-1" *ngIf="favouriteColor" (click)="onColorChange()">Change parent's color to my favourite</button>
+  </div>
+</div>

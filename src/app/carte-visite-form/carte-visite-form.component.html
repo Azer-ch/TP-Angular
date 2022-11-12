@@ -1,0 +1,10 @@
+<form>
+  <input class="form-control" type="text" placeholder="name" name="name" [(ngModel)]="profile.name">
+  <input class="form-control mt-2" type="text" placeholder="firstname" name="firstname" [(ngModel)]="profile.firstname">
+  <input class="form-control mt-2" type="text" placeholder="job" name="job" [(ngModel)]="profile.job">
+  <input class="form-control mt-2" type="text" placeholder="image" name="image" [(ngModel)]="profile.image">
+  <input class="form-control mt-2" type="text" placeholder="favourite quote" name="favouriteQuote" [(ngModel)]="profile.favouriteQuote">
+  <input class="form-control mt-2" type="text" placeholder="job description" name="jobDescription" [(ngModel)]="profile.jobDescription">
+  <input class="form-control mt-2" type="text" placeholder="key words" name="keyWords" [(ngModel)]="profile.keyWords">
+  <button class="btn btn-primary mt-2" (click)="onClickUpdate()">Update Profile</button>
+</form>

@@ -1,0 +1,10 @@
+<li class="list-group-item {{isActive ? 'active' : ''}}" *ngIf="cv" (click)="onItemClick()">
+<div class="row">
+  <div class="col-2">
+    <img src={{cv.path}}>
+  </div>
+  <div class="col-10 d-flex justify-content-center align-content-center">
+    <p>{{cv.firstname}} {{cv.name}}</p>
+  </div>
+</div>
+</li>

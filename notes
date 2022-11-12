@@ -1,0 +1,15 @@
+Directives : give instructions to Angular on how to render the templates to the DOM
+  - Components
+  - Structural Directives
+  - Attribute Directives
+can be defined as a class with a @Directive decorator
+
+Structural Directives :
+  allows the altering of the layout by adding ,removing or replacing elements in DOM
+  examples :
+      - *ngIf="object" => if object is defined the element is rendered into the dom
+      - *ngFor = "let object of objects"
+      - *ngSwitch
+   Questions :
+   how does angular detect changes and re-renders components
+   whats the ngOnInit() function

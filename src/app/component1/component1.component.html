@@ -1,0 +1,5 @@
+<div [style.background-color]="color" class="mt-1">
+  <input type="text" placeholder="color" [(ngModel)]="color">
+  <button class="m-lg-1" (click)="resetColor()">reset color</button>
+</div>
+<app-component2 [parentColor]="color" (colorChange)="changeColor($event)"></app-component2>

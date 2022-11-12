@@ -1,0 +1,3 @@
+<ul class="list-group" *ngFor="let cv of cvs">
+  <app-list-item [cv]="cv" (selectCv)="selectCv($event)" [isSelected]="selectedId===cv.id"></app-list-item>
+</ul>

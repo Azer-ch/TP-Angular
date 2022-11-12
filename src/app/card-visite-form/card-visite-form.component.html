@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-6">
+    <app-carte-visite [name]="name" [firstName]="firstName" [job]="job" [path]="path" [favouriteCitation]="favouriteCitation" [jobDescription]="jobDescription" [keyWords]="keyWords"></app-carte-visite>
+  </div>
+  <div class="col-6">
+    <form>
+      <input class="form-control mb-2" type="text" name="name" placeholder="name" [(ngModel)]="name">
+      <input class="form-control mb-2" type="text" name="firstName" placeholder="firstname" [(ngModel)]="firstName">
+      <input class="form-control mb-2" type="text" name="job" placeholder="job" [(ngModel)]="job">
+      <input class="form-control mb-2" type="text" name="path" placeholder="path" [(ngModel)]="path">
+      <input class="form-control mb-2" type="text" name="favouriteCitation" placeholder="favourite Citation" [(ngModel)]="favouriteCitation">
+      <input class="form-control mb-2" type="text" name="jobDescription" placeholder="job Description" [(ngModel)]="jobDescription">
+      <input class="form-control mb-2" type="text" name="keyWords" placeholder="keyWords" [(ngModel)]="keyWords">
+    </form>
+  </div>
+</div>
