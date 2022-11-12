@@ -13,6 +13,7 @@ import { CvDetailComponent } from './cv-detail/cv-detail.component';
 import { CvListComponent } from './cv-list/cv-list.component';
 import { ListItemComponent } from './list-item/list-item.component';
 import { DefaultImagePipe } from './pipes/default-image.pipe';
+import { EmbaucheComponentComponent } from './embauche-component/embauche-component.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { DefaultImagePipe } from './pipes/default-image.pipe';
     CvDetailComponent,
     CvListComponent,
     ListItemComponent,
-    DefaultImagePipe
+    DefaultImagePipe,
+    EmbaucheComponentComponent
   ],
     imports: [
         BrowserModule,

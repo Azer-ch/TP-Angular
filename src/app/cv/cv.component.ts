@@ -1,37 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import {Cv} from "../Model/Cv";
+import {CvService} from "../services/cv.service";
 
 @Component({
   selector: 'app-cv',
   templateUrl: './cv.component.html',
-  styleUrls: ['./cv.component.scss']
+  styleUrls: ['./cv.component.scss'],
+  providers:[CvService]
 })
 export class CvComponent implements OnInit {
-  cvs : Cv[] = [{
-    id:"1",
-    name:"stou",
-    firstname:"rr3d",
-    age:"23",
-    cin:"12345678",
-    job:"goat",
-    image:""
-  },
-    {
-      id:"2",
-      name:"speed",
-      firstname:"ishow",
-      age:"17",
-      cin:"12345678",
-      job:"streamer",
-      image:this.getImage("speed.jpg")
-    }];
-  selectedCv : Cv | undefined ;
-  constructor() { }
+  selectedCv : Cv | undefined;
+  cvs : Cv []=[];
+  cvsEmbauche : Cv[] =[];
+  constructor(private cvService : CvService) { }
 
   ngOnInit(): void {
-  }
-  getImage(image : string):string{
-    return `assets/images/${image}`;
+    this.cvs = this.cvService.getCvs()
   }
 
   selectCv(cv : Cv) {
