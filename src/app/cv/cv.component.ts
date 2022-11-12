@@ -14,7 +14,7 @@ export class CvComponent implements OnInit {
     age:"23",
     cin:"12345678",
     job:"goat",
-    image:this.getImage("stou.jpg")
+    image:""
   },
     {
       id:"2",
