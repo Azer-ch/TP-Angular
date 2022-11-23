@@ -20,6 +20,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { RouterModule } from '@angular/router';
 import { APP_ROUTES } from './app.routing';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { RouterSimulatorComponent } from './router-simulator/router-simulator.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     ListItemComponent,
     DefaultImagePipe,
     EmbaucheComponentComponent,
-    NavBarComponent
+    NavBarComponent,
+    RouterSimulatorComponent
   ],
     imports: [
         BrowserModule,
