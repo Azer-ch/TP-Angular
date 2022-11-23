@@ -17,6 +17,9 @@ import { EmbaucheComponentComponent } from './embauche-component/embauche-compon
 import {EmbaucheService} from "./services/embauche.service";
 import {ToastrModule} from "ngx-toastr";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { RouterModule } from '@angular/router';
+import { APP_ROUTES } from './app.routing';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -31,13 +34,15 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     CvListComponent,
     ListItemComponent,
     DefaultImagePipe,
-    EmbaucheComponentComponent
+    EmbaucheComponentComponent,
+    NavBarComponent
   ],
     imports: [
         BrowserModule,
         FormsModule,
         BrowserAnimationsModule,
         ToastrModule.forRoot(),
+        RouterModule.forRoot(APP_ROUTES)
     ],
   providers:[EmbaucheService],
   bootstrap: [AppComponent]
