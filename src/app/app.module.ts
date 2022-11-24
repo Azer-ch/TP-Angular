@@ -21,6 +21,7 @@ import { RouterModule } from '@angular/router';
 import { APP_ROUTES } from './app.routing';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { RouterSimulatorComponent } from './router-simulator/router-simulator.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { RouterSimulatorComponent } from './router-simulator/router-simulator.co
     DefaultImagePipe,
     EmbaucheComponentComponent,
     NavBarComponent,
-    RouterSimulatorComponent
+    RouterSimulatorComponent,
+    UserDetailsComponent
   ],
     imports: [
         BrowserModule,
