@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ICv} from "../../models/Cv";
+import { Cv } from '../Model/Cv';
 
 @Component({
   selector: 'app-detail-component',
@@ -8,13 +9,13 @@ import {ICv} from "../../models/Cv";
 })
 export class DetailComponentComponent implements OnInit {
   @Input()
-  cv : ICv | undefined;
+  cv : Cv = new Cv();
   constructor() { }
 
   ngOnInit(): void {
   }
   getPath() : string {
-    return `assets/images/${this.cv?.path}`;
+    return `assets/images/${this.cv?.image}`;
   }
 
 }
