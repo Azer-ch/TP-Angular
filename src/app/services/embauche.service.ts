@@ -9,7 +9,7 @@ export class EmbaucheService {
   cvEmbauche: Cv[] = []
 
   addCvEmbauche(cv: Cv) {
-    if (this.cvEmbauche.indexOf(cv) != -1) {
+    if (this.cvEmbauche.find(cvItem => cvItem.id === cv.id )) {
       this.toastr.error("Cv deja embauche")
     }
     else {
