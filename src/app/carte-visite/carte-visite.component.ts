@@ -13,7 +13,7 @@ export class CarteVisiteComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  updateProfile(profile: Profile) {
+  updateProfile(profile: any) {
     this.profile = profile;
   }
 }

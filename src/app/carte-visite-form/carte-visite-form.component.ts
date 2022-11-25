@@ -1,5 +1,8 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import { Subject } from 'rxjs';
 import {Profile} from "../Model/Profile";
+import { CarteVisiteServiceService } from '../services/carte-visite-service.service';
+
 
 @Component({
   selector: 'app-carte-visite-form',
@@ -7,10 +10,8 @@ import {Profile} from "../Model/Profile";
   styleUrls: ['./carte-visite-form.component.scss']
 })
 export class CarteVisiteFormComponent implements OnInit {
-  @Output()
-  updateProfile = new EventEmitter();
   profile : Profile;
-  constructor() {
+  constructor(private carteVisiteService: CarteVisiteServiceService) {
     this.profile = new Profile();
   }
 
@@ -18,6 +19,6 @@ export class CarteVisiteFormComponent implements OnInit {
   }
 
   onClickUpdate() {
-    this.updateProfile.emit(this.profile);
+    this.carteVisiteService.updateProfileObs(this.profile);
   }
 }
