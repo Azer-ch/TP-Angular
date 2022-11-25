@@ -22,6 +22,7 @@ import { APP_ROUTES } from './app.routing';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { RouterSimulatorComponent } from './router-simulator/router-simulator.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { NonStopImageComponent } from './non-stop-image/non-stop-image.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { UserDetailsComponent } from './user-details/user-details.component';
     EmbaucheComponentComponent,
     NavBarComponent,
     RouterSimulatorComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    NonStopImageComponent
   ],
     imports: [
         BrowserModule,
