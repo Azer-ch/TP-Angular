@@ -23,6 +23,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { RouterSimulatorComponent } from './router-simulator/router-simulator.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { NonStopImageComponent } from './non-stop-image/non-stop-image.component';
+import {AuthentificationFormComponent} from "./authentification-form/authentification-form.component";
+import { AddCvComponent } from './add-cv/add-cv.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { NonStopImageComponent } from './non-stop-image/non-stop-image.component
     NavBarComponent,
     RouterSimulatorComponent,
     UserDetailsComponent,
-    NonStopImageComponent
+    NonStopImageComponent,
+    AuthentificationFormComponent,
+    AddCvComponent
   ],
     imports: [
         BrowserModule,

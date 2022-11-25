@@ -7,7 +7,6 @@ import {EmbaucheService} from "../services/embauche.service";
   selector: 'app-cv',
   templateUrl: './cv.component.html',
   styleUrls: ['./cv.component.scss'],
-  providers:[CvService]
 })
 export class CvComponent implements OnInit {
   selectedCv : Cv | undefined;

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Cv} from "../Model/Cv";
+import { v4 as uuid } from 'uuid';
 
 @Injectable({
   providedIn: 'root'
@@ -31,6 +32,12 @@ export class CvService {
   }
   getCvById(id : string): any{
     return this.cvs.find(cv => cv.id === id);
+  }
+  addCv(cv : Cv){
+    cv.id = uuid().toString()
+    cv.image = this.getImage(cv.image)
+    console.log(this.cvs)
+    this.cvs.push(cv)
   }
   constructor() { }
 }

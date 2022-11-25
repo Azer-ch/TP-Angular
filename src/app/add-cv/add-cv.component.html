@@ -1,0 +1,64 @@
+<div class="container d-flex flex-column align-items-center justify-content-center">
+  <form class="w-50" #addCvForm="ngForm" (ngSubmit)="onSubmit(addCvForm)">
+    <div class="form-group">
+      <label for="firstname">firstname</label>
+      <input [(ngModel)]="cv.firstname" #firstname="ngModel" type="text" required  name="firstname"
+             class="form-control p-2 shadow-none" id="firstname"
+             placeholder="Enter firstname"
+      >
+      <div class="alert alert-danger mt-1" *ngIf="firstname.invalid && firstname.touched">
+        Firstname Required
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="name">lastname</label>
+        <input [(ngModel)]="cv.name" #name="ngModel" name="name" required
+               class="form-control p-2 shadow-none" id="name"
+               placeholder="Enter lastname">
+        <div class="alert alert-danger mt-1" *ngIf="name.invalid && name.touched">
+          Lastname Required
+        </div>
+    </div>
+    <div class="form-group">
+      <label for="age">Age</label>
+      <input [(ngModel)]="cv.age" #age="ngModel" name="age"  required
+             class="form-control p-2 shadow-none" id="age"
+             placeholder="Enter age">
+      <div class="alert alert-danger mt-1" *ngIf="age.invalid && age.touched">
+        Age Required
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="cin">Cin</label>
+      <input [(ngModel)]="cv.cin" #cin="ngModel" name="cin"  required
+             class="form-control p-2 shadow-none" id="cin"
+             placeholder="Enter cin">
+      <div class="alert alert-danger mt-1" *ngIf="cin.invalid && cin.touched">
+        Cin Required
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="job">Job</label>
+      <input [(ngModel)]="cv.job" #job="ngModel" name="job" required
+             class="form-control p-2 shadow-none" id="job"
+             placeholder="Enter job">
+      <div class="alert alert-danger mt-1" *ngIf="job.invalid && job.touched">
+        Job Required
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="image">Image</label>
+      <input [(ngModel)]="cv.image" #image="ngModel" name="image" required
+             class="form-control p-2 shadow-none" id="image"
+             placeholder="Enter image">
+      <div class="alert alert-danger mt-1" *ngIf="image.invalid && image.touched">
+        Path Required
+      </div>
+    </div>
+    <div class="text-center">
+      <button [ngClass]="{'disabled': addCvForm.invalid}" type="submit"
+              class="btn text-white bg-dark mt-1 justify-content-center">Submit
+      </button>
+    </div>
+</form>
+</div>
