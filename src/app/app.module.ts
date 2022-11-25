@@ -25,6 +25,7 @@ import { UserDetailsComponent } from './user-details/user-details.component';
 import { NonStopImageComponent } from './non-stop-image/non-stop-image.component';
 import {AuthentificationFormComponent} from "./authentification-form/authentification-form.component";
 import { AddCvComponent } from './add-cv/add-cv.component';
+import {CvService} from "./services/cv.service";
 
 @NgModule({
   declarations: [
@@ -54,7 +55,7 @@ import { AddCvComponent } from './add-cv/add-cv.component';
         ToastrModule.forRoot(),
         RouterModule.forRoot(APP_ROUTES)
     ],
-  providers:[EmbaucheService],
+  providers:[EmbaucheService,CvService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -11,7 +11,7 @@ export class NonStopImageComponent implements OnInit {
   imageList: string[] = [
     this.getImage("speed.jpg"),
     this.getImage("stou.jpg"),
-    this.getImage("alberto.png"),
+    this.getImage("pers2.png"),
 ]
   observable = new Observable(
     (observer) => {
@@ -29,12 +29,12 @@ export class NonStopImageComponent implements OnInit {
     }, 1000);
     });
 
-  
+
   constructor() { }
 
   ngOnInit(): void {
   }
-  
+
   getImage(image : string):string{
     return `assets/images/${image}`;
   }
