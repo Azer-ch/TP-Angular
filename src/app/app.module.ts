@@ -22,6 +22,7 @@ import { APP_ROUTES } from './app.routing';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { RouterSimulatorComponent } from './router-simulator/router-simulator.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { NonStopImageComponent } from './non-stop-image/non-stop-image.component';
 import {AuthentificationFormComponent} from "./authentification-form/authentification-form.component";
 import { AddCvComponent } from './add-cv/add-cv.component';
 
@@ -42,6 +43,7 @@ import { AddCvComponent } from './add-cv/add-cv.component';
     NavBarComponent,
     RouterSimulatorComponent,
     UserDetailsComponent,
+    NonStopImageComponent,
     AuthentificationFormComponent,
     AddCvComponent
   ],
