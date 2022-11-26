@@ -1,8 +1,15 @@
-<div *ngIf="getEmbauchedService().length>0">
-  <p> Liste cvs Embauches :</p>
-  <div class="col-4">
-  <ul class="list-group" *ngFor="let cv of getEmbauchedService()">
-    <app-list-item [cv]="cv"></app-list-item>
-  </ul>
-  </div>
+<div class="container">
+	<div *ngIf="getEmbauchedService().length>0; else noCvFound">
+	<p> Liste cvs Embauches :</p>
+	<div class="col-4">
+	<ul class="list-group" *ngFor="let cv of getEmbauchedService()">
+		<app-list-item [cv]="cv"></app-list-item>
+	</ul>
+	</div>
+	</div>
+	<ng-template #noCvFound>
+		<div class="alert alert-primary">
+			Pas de cv embauché!
+		</div>
+	</ng-template>
 </div>
