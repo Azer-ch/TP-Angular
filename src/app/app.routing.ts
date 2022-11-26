@@ -10,5 +10,6 @@ export const APP_ROUTES: Routes = [
   {path: 'cv', component: CvComponent},
   {path: 'addCv', component: AddCvComponent},
   {path: 'cvEmbauche', component: EmbaucheComponentComponent},
+  {path: 'carteVisite', component: CarteVisiteComponent},
   {path: 'cv/:id', component: UserDetailsComponent},
   {path:'login' , component : AuthentificationFormComponent}];
