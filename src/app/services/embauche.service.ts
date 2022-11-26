@@ -1,27 +1,32 @@
-import {Injectable} from '@angular/core';
-import {Cv} from "../Model/Cv";
-import {ToastrService} from "ngx-toastr";
+import { Injectable } from '@angular/core';
+import { Cv } from '../Model/Cv';
+import { ToastrService } from 'ngx-toastr';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class EmbaucheService {
-  cvEmbauche: Cv[] = []
+  cvEmbauche: Cv[] = [];
 
   addCvEmbauche(cv: Cv) {
-    if (this.cvEmbauche.find(cvItem => cvItem.id === cv.id )) {
-      this.toastr.error("Cv deja embauche")
-    }
-    else {
-      this.toastr.success("Cv embauche")
-      this.cvEmbauche.push(cv)
+    if (this.cvEmbauche.find((cvItem) => cvItem.id === cv.id)) {
+      this.toastr.error('Cv deja embauche');
+    } else {
+      this.toastr.success('Cv embauche');
+      this.cvEmbauche.push(cv);
     }
   }
 
   getCvsEmbauche(): Cv[] {
-    return this.cvEmbauche
+    return this.cvEmbauche;
   }
 
-  constructor(private toastr : ToastrService) {
+  removeCvsEmbauche(id: string) {
+    const idx = this.cvEmbauche.findIndex((cv) => cv.id === id);
+    if (idx !== -1) {
+      this.cvEmbauche.splice(idx, 1);
+    }
   }
+
+  constructor(private toastr: ToastrService) {}
 }
