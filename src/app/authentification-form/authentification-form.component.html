@@ -5,17 +5,17 @@
       <input [(ngModel)]="login.email" #email="ngModel" name="email" type="email" required
              [email]="true"
              class="form-control p-2 shadow-none" id="exampleInputEmail1"
-             [ngClass]="{'border-danger' : !email.valid && email.touched && login.email.length > 0}"
+             [ngClass]="{'border-danger' : email.invalid && email.touched}"
              placeholder="Enter email">
-      <div class="alert alert-danger mt-1" *ngIf="!email.valid && email.touched && login.email.length >0">Please enter a valid email</div>
+      <div class="alert alert-danger mt-1" *ngIf="email.invalid && email.touched">Please enter a valid email</div>
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Password</label>
       <input [(ngModel)]="login.password" #password="ngModel" name="password" required minlength="4" type="password"
              class="form-control shadow-none p-2"
-             [ngClass]="{'border-danger':!password.valid && password.touched && login.password.length>0}" id="exampleInputPassword1"
+             [ngClass]="{'border-danger':password.invalid && password.touched}" id="exampleInputPassword1"
              placeholder="Password">
-      <div class="alert alert-danger mt-1" *ngIf="!password.valid && password.touched && login.password.length >0">Password must contain at least 4 characters</div>
+      <div class="alert alert-danger mt-1" *ngIf="password.invalid && password.touched">Password must contain at least 4 characters</div>
     </div>
     <div class="text-center">
       <button [ngClass]="{'disabled': !form.valid}" type="submit"
